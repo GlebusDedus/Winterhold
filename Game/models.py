@@ -14,7 +14,7 @@ class Place(models.Model):
 class Enemy(models.Model):
     x=models.IntegerField(blank=False, default=0)
     y=models.IntegerField(blank=False, default=0)
-    name=models.CharField(max_length=20)
+    name=models.CharField(max_length=21)
     damage=models.IntegerField(blank=False, default=0)
     hp=models.IntegerField(blank=False, default=0,null=True)
 
