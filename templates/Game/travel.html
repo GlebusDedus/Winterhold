@@ -1,0 +1,21 @@
+{% extends 'Layout/basic.html' %}
+{% block title %}Главная{%endblock%}
+{% block content %}
+    <div class="travel">
+        <h1>Текущая локация: {{ place.name }}</h1>
+        <h2>x:{{ x }}, y:{{y}},enemy:{{enemy}}</h2>
+        <p>{{ msg }}</p>
+        <form id='direction_form' action="" method="post">
+            {% csrf_token %}
+            <input type='hidden' value="" name='direction' id='direction'>
+        </form>
+        <button id='w'
+            onclick="document.getElementById('direction_form').elements.direction.value = 'w'; document.getElementById('direction_form').submit();">Вперед</button>
+        <button id='s'
+            onclick="document.getElementById('direction_form').elements.direction.value = 's'; document.getElementById('direction_form').submit();">Назад</button>
+        <button id='d'
+            onclick="document.getElementById('direction_form').elements.direction.value = 'd'; document.getElementById('direction_form').submit();">Направо</button>
+        <button id='a'
+            onclick="document.getElementById('direction_form').elements.direction.value = 'a'; document.getElementById('direction_form').submit();">Налево</button>
+    </div>
+{% endblock %}

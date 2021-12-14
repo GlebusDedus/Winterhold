@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html> <!-- вот тут тоже я постарался -->
+<html lang="ru">
+<head>
+
+    <link rel="shortcut icon" href="{% static 'Game/picture/logo.jpg' %}" type="image/jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Game/css/main_css.css' %}">
+
+    <title>{% block title %}{%endblock%}</title>
+
+</head>
+<body bgcolor="#000" background="{% static 'Game/picture/background.jpg' %}"></body>
+
+    {%block content %}
+    {% endblock %}
+    
+</body>
+</html>
