@@ -1,0 +1,19 @@
+{% extends 'Layout/basic.html' %}
+{% block title %}Файтинг{%endblock%}
+{% block content %}
+<div class="home">
+    <h1 class="text_board">Тут будет файтинг)</h1>
+    <h1>
+        enemy:{{enemy}}
+    </h1>
+    <h1>
+        hp:{{hp}}
+        damage_e:{{damage}}
+    </h1>
+
+    <form action="{% url 'Game:travel' %}">
+        <button>Вернуться</button>
+    </form>
+
+</div>
+{% endblock %}
